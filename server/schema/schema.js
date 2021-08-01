@@ -67,7 +67,6 @@ const Director = new GraphQLObjectType({
 
 
 
-
 const Query = new GraphQLObjectType({
     name: 'Query',
     fields:{

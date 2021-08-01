@@ -4,7 +4,7 @@ const schema = require('../schema/schema')
 const moongose = require('mongoose')
 
 const app = express()
-const PORT = 3005
+const PORT = 3003
 
 moongose.connect('mongodb+srv://Almaz:pass12@cluster0.fvnc8.mongodb.net/Netflix?retryWrites=true&w=majority' , { useUnifiedTopology: true})
 
@@ -20,4 +20,4 @@ dbConnect.once('open' ,() => console.log('Connecteds'))
 
 app.listen(PORT , err =>{
     err ? console.log(err) : console.log('Server started')
-})
+})  

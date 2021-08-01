@@ -30,6 +30,7 @@ body{
 .navAvatar{
     position: fixed;
     right: 20px;
+    cursor: pointer;
     width: 30px;
 }
 
