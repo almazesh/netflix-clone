@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { auth, onSubmit } from '../../Firebase'
+import { auth } from '../../Firebase'
 import './SignUp.css'
 const SignUp = () =>{
     
@@ -31,7 +31,16 @@ const SignUp = () =>{
         .catch(err => alert(err.message))
     }
 
-
+     const onSubmit = () =>{
+        const googleAuth = new firebase.auth.GoogleAuthProvider()
+    
+        firebase.auth().signInWithPopup(googleAuth)
+        .then(res =>{
+          var token = res.credential.accessToken
+    
+          var user = res.user
+        })
+      }
     return (
         <>
             <div className='signUp_screen'>
