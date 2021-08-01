@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { auth } from '../../Firebase'
+import { auth, onSubmit } from '../../Firebase'
 import './SignUp.css'
 const SignUp = () =>{
     
@@ -31,6 +31,7 @@ const SignUp = () =>{
         .catch(err => alert(err.message))
     }
 
+
     return (
         <>
             <div className='signUp_screen'>
@@ -40,6 +41,7 @@ const SignUp = () =>{
                     <input ref={passwordRef} type="password" placeholder="Password    " />
                     <button type="submit" onClick={SignIn}>Sign In</button>
                     <h4><span>New to Netflix? </span><i onClick={register}>SignUp now.</i></h4>
+                    <a onClick={onSubmit}>or SignUp with Google now</a>
                 </form>
             </div>
         </>

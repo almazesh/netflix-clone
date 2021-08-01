@@ -2,13 +2,14 @@ import { jsxEmptyExpression } from "@babel/types";
 import firebase from "firebase";
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyCZ9k55Die14g68-hm2hb8BNBEJ0wt8rQE",
-    authDomain: "netflix-almaz-app.firebaseapp.com",
-    projectId: "netflix-almaz-app",
-    storageBucket: "netflix-almaz-app.appspot.com",
-    messagingSenderId: "370942612969",
-    appId: "1:370942612969:web:1fb478f876447e8789a778"
-  };
+  apiKey: "AIzaSyDxuhbibIi6UGQMvQWxuuw_-1Rknu2gaww",
+  authDomain: "netflix-clone-a939d.firebaseapp.com",
+  projectId: "netflix-clone-a939d",
+  storageBucket: "netflix-clone-a939d.appspot.com",
+  messagingSenderId: "801139902950",
+  appId: "1:801139902950:web:b20860f2825d2cfb4dae27",
+  measurementId: "G-HJNJB2HVY2"
+};
 
   const firebaseApp = firebase.initializeApp(firebaseConfig)
 
@@ -16,5 +17,16 @@ export const firebaseConfig = {
 
   const auth = firebase.auth();
 
-  export {auth} 
-  export default db;
+  export const onSubmit = () =>{
+    const googleAuth = new firebase.auth.GoogleAuthProvider()
+
+    firebase.auth().signInWithPopup(googleAuth)
+    .then(res =>{
+      var token = res.credential.accessToken
+
+      var user = res.user
+    })
+  }
+
+  export {auth } 
+  export default db ;

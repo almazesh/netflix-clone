@@ -3,7 +3,7 @@
     margin-left: auto;
     margin-right: auto;
     background: rgba(0,0,0,0.95);
-    padding: 58px;
+    padding: 18px 30px;
 }
 
 .signUp_screen > form{
@@ -39,6 +39,11 @@
 
 
 .signUp_screen h4 i:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.signUp_screen a{
     cursor: pointer;
     text-decoration: underline;
 }
